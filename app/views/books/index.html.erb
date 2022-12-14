@@ -1,0 +1,54 @@
+
+  <h1 class="book">Books</h1>
+
+  <table>
+   <thead>
+    <tr>
+     <th>Title</th>
+     <th>Body</th>
+    </tr>
+   </thead>
+
+
+ <% @books.each do |book| %>
+
+  <tbody>
+   <tr>
+    <td class="tbtitle"><%= book.title %></td>
+    <td class="tbbody"><%= book.body %></td>
+    <td>
+     <%= link_to "Show", book_path(book.id) %>
+     <%= link_to "Edit", edit_book_path(book.id) %>
+     <%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+    </td>
+   </tr>
+  </tbody>
+ <% end %>
+</table>
+
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
+
+ <h2 class="newbook">New book</h2>
+
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>errors prohibited this book from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+ <div class="newtb">
+   <div class="titleindex">
+    <h4 class="newtitle">Title</h4>
+     <span><%= f.text_field :title %></span>
+   </div>
+
+   <div class="bodyindex">
+    <h4 class="newbody">Body</h4>
+     <span class="bodyindex"><%= f.text_area :body %></span>
+   </div>
+     <span class="create"><%= f.submit 'Create Book' %></span>
+ </div>
+<% end %>

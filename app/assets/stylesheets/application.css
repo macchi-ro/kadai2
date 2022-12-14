@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 33px;
+  font-size:  13px;
+  line-height: 18px;
+}
+
+.texttop1 {
+  font-family: verdana, arial, helvetica, sans-serif;
+  margin: 33px;
+  font-size: 13px
+}
+
+.texttop2 {
+  font-family: verdana, arial, helvetica, sans-serif;
+  margin: 33px;
+  font-size: 13px
+}
+
+.toplink {
+  font-size: 13px;
+  margin: 33px;
+}
+
+.book {
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+th {
+  width: 89px;
+  height: 24px;
+  text-align: center
+}
+
+.tbtitle {
+  width: 89px;
+  height: 24px;
+}
+
+.tbbody {
+  width: 89px;
+  height: 24px;
+}
+
+.newbook {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.newtb {
+  display:flex;
+  flex-flow: column;
+}
+
+.titleindex {
+  margin-bottom: 10px;
+}
+
+.bodyindex {
+  margin-bottom: 10px;
+}
